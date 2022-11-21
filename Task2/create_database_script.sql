@@ -82,11 +82,13 @@ CREATE TABLE email (
 
 ALTER TABLE email ADD CONSTRAINT PK_email PRIMARY KEY (student_id,email);
 
+CREATE TYPE valid_skill_levels AS ENUM ('beginner', 'intermediate', 'advanced');
+CREATE TYPE valid_lesson_types AS ENUM ('individual_lesson', 'group_lesson', 'ensemble');
 
 CREATE TABLE lesson (
  lesson_id SERIAL NOT NULL,
- skill_level VARCHAR(20),
- lesson_type VARCHAR(20),
+ skill_level valid_skill_levels,
+ lesson_type valid_lesson_types NOT NULL,
  time TIMESTAMP(6) NOT NULL,
  pricing_scheme_id SERIAL,
  instructor_id SERIAL,

@@ -104,13 +104,13 @@ insert into instrument (name, brand, type, number_in_stock) values ('Piano', nul
 -- PRICING_SCHEME
 INSERT INTO pricing_scheme (skill_level,lesson_type,instructor_cut,student_pay, discount)
 VALUES
-  ('Beginner','Individual',20,30,10),
-  ('Beginner','Group',30,10,10),
-  ('Intermediate', 'Individual',20,30,10),
-  ('Intermediate', 'Group',30,10,10),
-  ('Advanced', 'Individual',25,35,10),
-  ('Advanced', 'Group',35,15,10),
-  (null, 'Ensemble',40,10,10);
+  ('beginner','individual_lesson',20,30,10),
+  ('beginner','group_lesson',30,10,10),
+  ('intermediate', 'individual_lesson',20,30,10),
+  ('intermediate', 'group_lesson',30,10,10),
+  ('advanced', 'individual_lesson',25,35,10),
+  ('advanced', 'group_lesson',35,15,10),
+  (null, 'ensemble',40,10,10);
 
 
 -- RENTAL
@@ -629,7 +629,6 @@ VALUES
   (1,'2022-11-09 23:00:00'),
   (13,'2022-11-13 13:00:00'),
   (13,'2022-11-22 08:00:00'),
-  (6,'2022-11-02 05:00:00'),
   (9,'2022-11-12 07:00:00'),
   (8,'2022-11-23 07:00:00');
 INSERT INTO available_at (instructor_id,time)
