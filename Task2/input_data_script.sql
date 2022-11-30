@@ -214,58 +214,70 @@ VALUES
 
 
 -- LESSON
-INSERT INTO lesson (skill_level,lesson_type,time,instrument_type,min_students,max_students,genre,instructor_id,pricing_scheme_id)
+INSERT INTO lesson (skill_level,lesson_type,time,instrument_type,min_students,max_students,genre,instructor_id,pricing_scheme_id, student_amount)
 VALUES
-  ('intermediate','group_lesson','2022-08-26 23:50:13','Viola',5,20,NULL,3,4),
-  ('beginner','group_lesson','2022-02-09 20:29:34','Drums',4,17,NULL,13,2),
-  ('advanced','group_lesson','2023-03-09 20:43:30','Flute',3,14,NULL,11,6),
-  ('intermediate','ensemble','2023-02-23 15:59:30',NULL,4,17,'Metal',7,7),
-  ('advanced','ensemble','2022-01-13 11:34:52',NULL,5,18,'Rock',5,7),
-  ('intermediate','group_lesson','2021-11-27 13:15:28','Saxophone',4,17,NULL,6,4),
-  ('advanced','group_lesson','2022-02-21 09:32:39','Viola',3,10,NULL,7,6),
-  ('beginner','ensemble','2023-06-30 22:26:54',NULL,3,13,'K-Pop',2,7),
-  ('intermediate','individual_lesson','2023-06-15 09:23:56','Ukulele',1,NULL,NULL,15,3),
-  ('advanced','group_lesson','2022-09-02 17:03:56','Piano',4,13,NULL,3,6),
-  ('intermediate','group_lesson','2022-02-02 01:36:23','Drums',5,13,NULL,13,4),
-  ('advanced','ensemble','2022-07-16 15:31:41',NULL,3,15,'Pop',8,7),
-  ('advanced','individual_lesson','2022-03-09 17:27:59','Ukulele',1,NULL,NULL,15,5),
-  ('beginner','individual_lesson','2022-09-23 07:40:17','Guitar',1,NULL,NULL,9,1),
-  ('intermediate','group_lesson','2022-04-28 12:14:06','Drums',3,14,NULL,13,4),
-  ('intermediate','ensemble','2022-10-12 02:31:19',NULL,5,18,'Country',5,7),
-  ('intermediate','ensemble','2023-07-30 10:33:39',NULL,2,12,'Hip-Hop',9,7),
-  ('advanced','group_lesson','2021-12-09 20:19:39','Violin',2,10,NULL,8,6),
-  ('advanced','ensemble','2023-08-05 00:40:11',NULL,3,19,'Pop',15,7),
-  ('beginner','group_lesson','2023-07-19 01:06:04','Piano',3,11,NULL,5,2),
-  ('intermediate','ensemble','2022-04-10 00:42:06',NULL,2,15,'Pop',11,7),
-  ('beginner','group_lesson','2023-09-24 14:41:14','Viola',4,20,NULL,7,2),
-  ('intermediate','ensemble','2023-03-18 22:02:02',NULL,4,14,'Country',3,7),
-  ('advanced','ensemble','2023-05-05 04:15:21',NULL,2,15,'Hip-Hop',4,7),
-  ('beginner','individual_lesson','2021-12-19 19:01:05','Flute',1,NULL,NULL,6,1),
-  ('beginner','individual_lesson','2023-01-22 04:16:01','Trumpet',1,NULL,NULL,8,1),
-  ('beginner','ensemble','2022-10-09 21:35:52',NULL,2,12,'Pop',12,7),
-  ('intermediate','individual_lesson','2023-03-16 21:07:03','Piano',1,NULL,NULL,8,3),
-  ('beginner','group_lesson','2023-06-16 16:42:32','Trumpet',4,12,NULL,8,2),
-  ('intermediate','ensemble','2022-06-16 12:09:53',NULL,2,20,'Country',11,7),
-  ('advanced','ensemble','2023-11-05 23:10:22',NULL,5,13,'Hip-Hop',14,7),
-  ('intermediate','group_lesson','2023-08-24 17:07:24','Trumpet',2,10,NULL,8,4),
-  ('advanced','group_lesson','2023-08-15 23:29:42','Viola',2,19,NULL,3,6),
-  ('beginner','group_lesson','2023-08-03 20:31:00','Saxophone',3,12,NULL,10,2),
-  ('intermediate','group_lesson','2022-08-29 03:18:41','Trumpet',3,17,NULL,4,4),
-  ('intermediate','ensemble','2023-10-20 14:49:34',NULL,4,14,'Polish',11,7),
-  ('advanced','individual_lesson','2023-01-13 11:31:43','Viola',1,NULL,NULL,7,5),
-  ('advanced','group_lesson','2022-11-24 11:44:14','Ukulele',2,12,NULL,15,6),
-  ('beginner','ensemble','2022-09-23 02:28:24',NULL,3,19,'Metal',14,7),
-  ('advanced','individual_lesson','2023-07-04 01:14:45','Guitar',1,NULL,NULL,1,5),
-  ('intermediate','group_lesson','2022-01-05 12:33:36','Violin',5,15,NULL,2,4),
-  ('intermediate','group_lesson','2023-11-18 11:01:54','Ukulele',5,16,NULL,8,4),
-  ('beginner','group_lesson','2022-12-07 17:34:59','Violin',3,16,NULL,2,2),
-  ('intermediate','individual_lesson','2022-12-19 17:18:13','Trumpet',1,NULL,NULL,4,3),
-  ('intermediate','group_lesson','2022-10-09 16:32:42','Trumpet',3,17,NULL,8,4),
-  ('beginner','individual_lesson','2022-08-16 04:12:41','Ukulele',1,NULL,NULL,15,1),
-  ('advanced','individual_lesson','2021-12-27 02:56:13','Saxophone',1,NULL,NULL,6,5),
-  ('intermediate','group_lesson','2023-08-09 11:51:37','Drums',4,15,NULL,13,4),
-  ('intermediate','ensemble','2022-09-08 22:47:49',NULL,3,18,'Metal',14,7),
-  ('beginner','group_lesson','2022-07-20 15:32:53','Saxophone',3,19,NULL,8,2);
+  ('intermediate','group_lesson','2022-08-26 23:50:13','Viola',5,20,NULL,3,4, NULL),
+  ('beginner','group_lesson','2022-02-09 20:29:34','Drums',4,17,NULL,13,2, NULL),
+  ('advanced','group_lesson','2023-03-09 20:43:30','Flute',3,14,NULL,11,6, NULL),
+  ('intermediate','ensemble','2023-02-23 15:59:30',NULL,4,17,'Metal',7,7, 6),
+  ('advanced','ensemble','2022-01-13 11:34:52',NULL,5,9,'Rock',5,7, 7),
+  ('intermediate','group_lesson','2021-11-27 13:15:28','Saxophone',4,17,NULL,6,4, NULL),
+  ('advanced','group_lesson','2022-02-21 09:32:39','Viola',3,10,NULL,7,6, NULL),
+  ('beginner','ensemble','2023-06-30 22:26:54',NULL,3,13,'K-Pop',2,7,12),
+  ('intermediate','individual_lesson','2023-06-15 09:23:56','Ukulele',1,NULL,NULL,15,3, NULL),
+  ('advanced','group_lesson','2022-09-02 17:03:56','Piano',4,13,NULL,3,6, NULL),
+  ('intermediate','group_lesson','2022-02-02 01:36:23','Drums',5,13,NULL,13,4, NULL),
+  ('advanced','ensemble','2022-07-16 15:31:41',NULL,3,15,'Pop',8,7,15),
+  ('advanced','individual_lesson','2022-03-09 17:27:59','Ukulele',1,NULL,NULL,15,5, NULL),
+  ('beginner','individual_lesson','2022-09-23 07:40:17','Guitar',1,NULL,NULL,9,1, NULL),
+  ('intermediate','group_lesson','2022-04-28 12:14:06','Drums',3,14,NULL,13,4, NULL),
+  ('intermediate','ensemble','2022-10-12 02:31:19',NULL,5,18,'Country',5,7,18),
+  ('intermediate','ensemble','2023-07-30 10:33:39',NULL,2,12,'Hip-Hop',9,7,4),
+  ('advanced','group_lesson','2021-12-09 20:19:39','Violin',2,10,NULL,8,6, NULL),
+  ('advanced','ensemble','2023-08-05 00:40:11',NULL,3,19,'Pop',15,7,18),
+  ('beginner','group_lesson','2023-07-19 01:06:04','Piano',3,11,NULL,5,2, NULL),
+  ('intermediate','ensemble','2022-04-10 00:42:06',NULL,2,15,'Pop',11,7, 15),
+  ('beginner','group_lesson','2023-09-24 14:41:14','Viola',4,20,NULL,7,2, NULL),
+  ('intermediate','ensemble','2023-03-18 22:02:02',NULL,4,14,'Country',3,7,13),
+  ('advanced','ensemble','2023-05-05 04:15:21',NULL,2,15,'Hip-Hop',4,7,5),
+  ('beginner','individual_lesson','2021-12-19 19:01:05','Flute',1,NULL,NULL,6,1, NULL),
+  ('beginner','individual_lesson','2023-01-22 04:16:01','Trumpet',1,NULL,NULL,8,1, NULL),
+  ('beginner','ensemble','2022-10-09 21:35:52',NULL,2,12,'Pop',12,7,9),
+  ('intermediate','individual_lesson','2023-03-16 21:07:03','Piano',1,NULL,NULL,8,3, NULL),
+  ('beginner','group_lesson','2023-06-16 16:42:32','Trumpet',4,12,NULL,8,2, NULL),
+  ('intermediate','ensemble','2022-06-16 12:09:53',NULL,2,20,'Country',11,7,19),
+  ('advanced','ensemble','2023-11-05 23:10:22',NULL,5,13,'Hip-Hop',14,7, 11),
+  ('intermediate','group_lesson','2023-08-24 17:07:24','Trumpet',2,10,NULL,8,4, NULL),
+  ('advanced','group_lesson','2023-08-15 23:29:42','Viola',2,19,NULL,3,6, NULL),
+  ('beginner','group_lesson','2023-08-03 20:31:00','Saxophone',3,12,NULL,10,2, NULL),
+  ('intermediate','group_lesson','2022-08-29 03:18:41','Trumpet',3,17,NULL,4,4, NULL),
+  ('intermediate','ensemble','2023-10-20 14:49:34',NULL,4,14,'Polish',11,7,12),
+  ('advanced','individual_lesson','2023-01-13 11:31:43','Viola',1,NULL,NULL,7,5, NULL),
+  ('advanced','group_lesson','2022-11-24 11:44:14','Ukulele',2,12,NULL,15,6, NULL),
+  ('beginner','ensemble','2022-09-23 02:28:24',NULL,3,19,'Metal',14,7,19),
+  ('advanced','individual_lesson','2023-07-04 01:14:45','Guitar',1,NULL,NULL,1,5, NULL),
+  ('intermediate','group_lesson','2022-01-05 12:33:36','Violin',5,15,NULL,2,4, NULL),
+  ('intermediate','group_lesson','2023-11-18 11:01:54','Ukulele',5,16,NULL,8,4, NULL),
+  ('beginner','group_lesson','2022-12-07 17:34:59','Violin',3,16,NULL,2,2, NULL),
+  ('intermediate','individual_lesson','2022-12-19 17:18:13','Trumpet',1,NULL,NULL,4,3, NULL),
+  ('intermediate','group_lesson','2022-10-09 16:32:42','Trumpet',3,17,NULL,8,4, NULL),
+  ('beginner','individual_lesson','2022-08-16 04:12:41','Ukulele',1,NULL,NULL,15,1, NULL),
+  ('advanced','individual_lesson','2021-12-27 02:56:13','Saxophone',1,NULL,NULL,6,5, NULL),
+  ('intermediate','group_lesson','2023-08-09 11:51:37','Drums',4,15,NULL,13,4, NULL),
+  ('intermediate','ensemble','2022-09-08 22:47:49',NULL,3,18,'Metal',14,7,14),
+  ('beginner','group_lesson','2022-07-20 15:32:53','Saxophone',3,19,NULL,8,2, NULL),
+  ('beginner', 'ensemble', '2022-12-09 15:32:53', NULL,3,18,'Metal',14,7,14);
+INSERT INTO lesson (skill_level,lesson_type,time,instrument_type,min_students,max_students,genre,instructor_id,pricing_scheme_id, student_amount)
+VALUES
+('beginner', 'ensemble', '2022-14-09 15:00:00', NULL,3,18,'Metal',14,7,14),
+('beginner', 'ensemble', '2022-15-10 12:00:00', NULL,3,18,'Pop',14,7,18),
+('beginner', 'ensemble', '2022-16-11 10:00:00', NULL,3,18,'Hip-Hop',14,7,17),
+('beginner', 'ensemble', '2022-15-12 11:00:00', NULL,3,18,'Metal',14,7,16),
+('beginner', 'ensemble', '2022-18-11 14:00:00', NULL,3,18,'Metal',14,7,18),
+('beginner', 'ensemble', '2022-17-13 18:00:00', NULL,3,18,'Country',14,7,14),
+('beginner', 'ensemble', '2022-14-09 19:00:00', NULL,3,18,'Metal',14,7,16),
+('beginner', 'ensemble', '2022-19-09 21:00:00', NULL,3,18,'Country',14,7,14),
+
 
 
 -- CAN_TEACH
@@ -656,7 +668,7 @@ VALUES
 
 --SIBLING_STUDENT_ID
 
-INSERT INTO sibling_personal_number (student_id,sibling_student_id)
+INSERT INTO sibling (student_id,sibling_student_id)
 VALUES
   (16,1),
   (47,1),
@@ -665,7 +677,7 @@ VALUES
   (34,27),
   (29,42),
   (49,19);
-INSERT INTO sibling_personal_number (student_id,sibling_student_id)
+INSERT INTO sibling (student_id,sibling_student_id)
 VALUES
   (33,39),
   (9,14),
@@ -674,7 +686,7 @@ VALUES
   (12,8),
   (18,36),
   (24,38);
-INSERT INTO sibling_personal_number (student_id,sibling_student_id)
+INSERT INTO sibling (student_id,sibling_student_id)
 VALUES
   (14,30),
   (31,24),
