@@ -1,21 +1,28 @@
+--copying students
+INSERT INTO student(student_id, person_number, name, street, zip, city)
+SELECT student_id, person_number, name, street, zip, city
+FROM dblink('dbname=soundgood user=postgres password=a options=-csearch_path=',
+                'SELECT student_id, person_number, name, street, zip, city FROM public.student')
+AS t1(student_id int, person_number varchar, name varchar, street varchar, zip varchar, city varchar);
 
 --copying lessons
-INSERT INTO historic_lesson(lesson_id,skill_level,lesson_type,time, genre, instrument_type, min_students, max_students, student_amount, price)
-SELECT l.lesson_id, l.skill_level, l.lesson_type, l.time,l.genre, l.instrument_type, l.min_students, l.max_students, l.student_amount, p.student_pay
-FROM lesson AS l
-LEFT JOIN pricing_scheme p ON l.pricing_scheme_id = p.pricing_scheme_id;
+INSERT INTO lesson(lesson_id,skill_level,lesson_type,time, genre, instrument_type, min_students, max_students, student_amount, price)
+SELECT lesson_id, skill_level, lesson_type, time, genre, instrument_type, min_students, max_students, student_amount, student_pay
+FROM dblink('dbname=soundgood user=postgres password=a options=-csearch_path=',
+                'SELECT l.lesson_id, l.skill_level, l.lesson_type, l.time, l.genre, l.instrument_type, l.min_students, l.max_students, l.student_amount, p.student_pay
+FROM public.lesson AS l
+LEFT JOIN public.pricing_scheme AS p ON l.pricing_scheme_id = p.pricing_scheme_id;')
+AS t1(lesson_id int, skill_level valid_skill_levels, lesson_type valid_lesson_types,
+time timestamp, genre varchar, instrument_type varchar, min_students int, max_students int, student_amount int, student_pay int);
 
---copying students
-INSERT INTO historic_student(student_id, person_number, name, street, zip, city)
-SELECT student_id, person_number, name, street, zip, city
-FROM student;
-
---copying student lesson
-INSERT INTO historic_student_lesson
+--copying student_lessons
+INSERT INTO student_lesson
 SELECT *
-FROM student_lesson;
+FROM dblink('dbname=soundgood user=postgres password=a options=-csearch_path=',
+            'SELECT student_id, lesson_id FROM public.student_lesson')
+AS t1(student_id int, lesson_id int);
 
 --Example Query From historic database which finds all lesson_ids a student with id 9 has taken
 SELECT lesson_id
-FROM historic_student_lesson
+FROM student_lesson
 WHERE student_id = 9;

@@ -213,6 +213,7 @@ VALUES
   (50,'Blake Owens','03 85 42 97 25','sagittis.duis.gravida@protonmail.net');
 
 
+
 -- LESSON
 INSERT INTO lesson (skill_level,lesson_type,time,instrument_type,min_students,max_students,genre,instructor_id,pricing_scheme_id, student_amount)
 VALUES
@@ -266,19 +267,15 @@ VALUES
   ('intermediate','group_lesson','2023-08-09 11:51:37','Drums',4,15,NULL,13,4, NULL),
   ('intermediate','ensemble','2022-09-08 22:47:49',NULL,3,18,'Metal',14,7,14),
   ('beginner','group_lesson','2022-07-20 15:32:53','Saxophone',3,19,NULL,8,2, NULL),
-  ('beginner', 'ensemble', '2022-12-09 15:32:53', NULL,3,18,'Metal',14,7,14);
-INSERT INTO lesson (skill_level,lesson_type,time,instrument_type,min_students,max_students,genre,instructor_id,pricing_scheme_id, student_amount)
-VALUES
-('beginner', 'ensemble', '2022-14-09 15:00:00', NULL,3,18,'Metal',14,7,14),
-('beginner', 'ensemble', '2022-15-10 12:00:00', NULL,3,18,'Pop',14,7,18),
-('beginner', 'ensemble', '2022-16-11 10:00:00', NULL,3,18,'Hip-Hop',14,7,17),
-('beginner', 'ensemble', '2022-15-12 11:00:00', NULL,3,18,'Metal',14,7,16),
-('beginner', 'ensemble', '2022-18-11 14:00:00', NULL,3,18,'Metal',14,7,18),
-('beginner', 'ensemble', '2022-17-13 18:00:00', NULL,3,18,'Country',14,7,14),
-('beginner', 'ensemble', '2022-14-09 19:00:00', NULL,3,18,'Metal',14,7,16),
-('beginner', 'ensemble', '2022-19-09 21:00:00', NULL,3,18,'Country',14,7,14),
-
-
+  ('beginner', 'ensemble', '2022-09-12 15:32:53', NULL,3,18,'Metal',14,7,14),
+  ('beginner', 'ensemble', '2022-09-14 15:00:00', NULL,3,18,'Metal',14,7,14),
+  ('beginner', 'ensemble', '2022-10-15 12:00:00', NULL,3,18,'Pop',14,7,18),
+  ('beginner', 'ensemble', '2022-11-16 10:00:00', NULL,3,18,'Hip-Hop',14,7,17),
+  ('beginner', 'ensemble', '2022-12-15 11:00:00', NULL,3,18,'Metal',14,7,16),
+  ('beginner', 'ensemble', '2022-11-18 14:00:00', NULL,3,18,'Metal',14,7,18),
+  ('beginner', 'ensemble', '2022-03-17 18:00:00', NULL,3,18,'Country',14,7,14),
+  ('beginner', 'ensemble', '2022-09-14 19:00:00', NULL,3,18,'Metal',14,7,16),
+  ('beginner', 'ensemble', '2022-09-19 21:00:00', NULL,3,18,'Country',14,7,14);
 
 -- CAN_TEACH
 INSERT INTO can_teach(instructor_id, instrument_id)
