@@ -58,7 +58,7 @@ CREATE MATERIALIZED VIEW ensembles_next_week AS
     END as seats_left
     FROM lesson 
     WHERE date_trunc('week', time) = date_trunc('week', now()) + interval '1 week' AND lesson.lesson_type = 'ensemble' 
-    ORDER BY weekday, genre;
+    ORDER BY weekday DESC, genre;
 
 --query
 SELECT *

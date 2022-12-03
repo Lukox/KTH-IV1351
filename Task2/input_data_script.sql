@@ -275,7 +275,15 @@ VALUES
   ('beginner', 'ensemble', '2022-11-18 14:00:00', NULL,3,18,'Metal',14,7,18),
   ('beginner', 'ensemble', '2022-03-17 18:00:00', NULL,3,18,'Country',14,7,14),
   ('beginner', 'ensemble', '2022-09-14 19:00:00', NULL,3,18,'Metal',14,7,16),
-  ('beginner', 'ensemble', '2022-09-19 21:00:00', NULL,3,18,'Country',14,7,14);
+  ('beginner', 'ensemble', '2022-09-19 21:00:00', NULL,3,18,'Country',14,7,14),
+  ('beginner', 'ensemble', '2022-12-12 21:00:00', NULL,3,18,'Country',14,7,14),
+  ('beginner', 'ensemble', '2022-12-8 19:00:00', NULL,3,18,'Metal',14,7,16),
+  ('beginner', 'ensemble', '2022-12-7 21:00:00', NULL,3,18,'Country',8,7,18),
+  ('beginner', 'ensemble', '2022-12-9 21:00:00', NULL,3,18,'Hip-Hop',10,7,14),
+  ('beginner', 'ensemble', '2022-12-9 19:00:00', NULL,3,18,'Metal',14,7,16),
+  ('beginner', 'ensemble', '2022-12-9 21:00:00', NULL,3,18,'Pop',8,7,18),
+  ('beginner', 'ensemble', '2022-12-9 18:00:00', NULL,3,18,'Hip-Hop',10,7,18);
+
 
 -- CAN_TEACH
 INSERT INTO can_teach(instructor_id, instrument_id)
