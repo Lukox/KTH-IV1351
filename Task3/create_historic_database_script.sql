@@ -24,6 +24,7 @@ CREATE TABLE lesson (
  instrument_type VARCHAR(200),
  min_students INT,
  max_students INT,
+ instructor_id INT NOT NULL,
  student_amount INT,
  price INT NOT NULL
 );
